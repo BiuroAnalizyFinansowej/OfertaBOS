@@ -77,6 +77,13 @@
             padding-bottom: 10px;
             margin-bottom: 25px;
         }
+        
+        h3 {
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
 
         .comparison-table {
             width: 100%;
@@ -117,7 +124,7 @@
             text-decoration: line-through;
         }
 
-        .details-list {
+        .details-list, .conditions-list, .commitments-list, .security-list {
             list-style: none;
             padding: 0;
         }
@@ -130,6 +137,36 @@
         }
         .details-list strong {
             color: #004d99;
+        }
+        
+        .conditions-list {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        .conditions-list li {
+            background: #f8faff;
+            border-left: 4px solid #007bff;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+        }
+
+        .commitments-list li, .security-list li {
+            padding: 8px 0;
+            color: #444;
+        }
+        
+        .commitments-list li:before, .security-list li:before {
+            content: "➔";
+            color: #007bff;
+            margin-right: 10px;
+        }
+        
+        .indented-block {
+            border-left: 3px solid #e0e9f5;
+            padding-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
 
         .benefits {
@@ -230,6 +267,55 @@
                     <li><strong>Prowizja przygotowawcza:</strong> Jednorazowa opłata w wysokości <strong>1%</strong> kwoty kredytu. To dla Pana Doktora <strong>realna oszczędność</strong> w porównaniu do standardowej stawki 3,99%.</li>
                     <li><strong>Prowizja za wcześniejszą spłatę:</strong> <strong>0%</strong>. Daje to Panu pełną elastyczność i możliwość nadpłacania lub całkowitej spłaty kredytu w dowolnym momencie bez żadnych dodatkowych kosztów.</li>
                     <li><strong>Opłata BGK (Gwarancja de minimis):</strong> <strong>0,50%</strong> w skali roku od kwoty gwarancji.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Zabezpieczenie Kredytu</h2>
+                <h3>Proponowane zabezpieczenia</h3>
+                <ul class="security-list">
+                    <li>Pełnomocnictwo do rachunku bieżącego w BOŚ S.A.</li>
+                    <li>Weksel własny in blanco wraz z deklaracją wekslową.</li>
+                    <li>Gwarancja BGK de minimis.</li>
+                </ul>
+
+                <h3>Warunki po wygaśnięciu Gwarancji BGK</h3>
+                <p>Ponieważ okres kredytowania przekracza okres trwania gwarancji, zastosowanie mają następujące zasady:</p>
+                <div class="indented-block">
+                    <p><strong>1. Możliwość odnowienia:</strong> Na 90 dni przed wygaśnięciem Gwarancji, Bank może przedstawić Panu ofertę nowego kredytu na spłatę pozostałej kwoty, który będzie zabezpieczony nową Gwarancją de minimis.</p>
+                    <p><strong>2. Postępowanie w przypadku braku nowej umowy:</strong> Jeśli Bank nie przedstawi nowej oferty lub Pan z niej nie skorzysta, po wygaśnięciu Gwarancji marża Banku zostanie podwyższona o <strong>4,00 p.p.</strong></p>
+                    <p>Można uniknąć podwyższenia marży, jeśli najpóźniej w ostatnim dniu obowiązywania Gwarancji ustanowi Pan jedno z poniższych zabezpieczeń:</p>
+                    <ul class="security-list">
+                         <li>Ustanowienie kaucji w wysokości 60% kwoty kredytu pozostającej do spłaty, <strong>lub</strong></li>
+                         <li>Ustanowienie innego, zaakceptowanego przez Bank zabezpieczenia spłaty pozostałej kwoty kredytu.</li>
+                    </ul>
+                </div>
+                 <p style="font-size: 0.9em; color: #777; text-align: center; margin-top: 20px;"><em>Zabezpieczenia zgodne z kartą produktu.</em></p>
+            </div>
+
+            <div class="section">
+                <h2>Warunki Uruchomienia Środków</h2>
+                <h3>Uruchomienie I transzy (spłata zobowiązań)</h3>
+                <p>Uruchomienie pierwszej transzy kredytu nastąpi bezpośrednio na spłatę konsolidowanych kredytów na podstawie zaświadczeń o saldzie zadłużenia. Warunkiem jest spełnienie poniższych formalności:</p>
+                <ol class="conditions-list">
+                    <li>Opłacenie prowizji przygotowawczej.</li>
+                    <li>Złożenie pełnomocnictwa do rachunku bieżącego w PLN prowadzonego w BOŚ SA.</li>
+                    <li>Złożenie weksla in blanco wraz z deklaracją wekslową na rzecz BOŚ S.A.</li>
+                    <li>Ustanowienie zabezpieczenia na rzecz BGK poprzez złożenie weksla in blanco wraz z deklaracją wekslową na rzecz BGK.</li>
+                    <li>Dostarczenie aktualnego zaświadczenia z Urzędu Skarbowego o braku zaległości (nie starszego niż 30 dni).</li>
+                    <li>Dostarczenie aktualnego zaświadczenia z ZUS o braku zaległości (nie starszego niż 30 dni).</li>
+                    <li>Pobranie przez Bank prowizji z tytułu Gwarancji de minimis (0,5% kwoty gwarancji) z Pana rachunku bieżącego.</li>
+                </ol>
+
+                <h3>Uruchomienie II transzy (środki dla Pana Doktora)</h3>
+                <p>Wypłata pozostałej kwoty kredytu nastąpi na Pana rachunek bieżący w Banku po przedłożeniu zaświadczeń, które potwierdzają całkowitą spłatę i zamknięcie następujących zobowiązań:</p>
+                <ul class="commitments-list">
+                    <li>Umowa nr PRO429816688 z dnia 07.10.2019 r. (Nest Bank S.A.)</li>
+                    <li>Umowa nr 182826_2002 z dnia 30.07.2025 r. (Santander Bank Polska S.A)</li>
+                    <li>Umowa nr 63 1020 5138 0000 9396 0112 7574 z dnia 20.05.2024 r. (Bank PKO BP S.A.)</li>
+                    <li>Umowa nr F10R21-27002550 z dnia 29.09.2021 r. (BNP Paribas Bank Polska S.A.)</li>
+                    <li>Umowa nr 61114020040000330279068215 z dnia 09.08.2019 r. (mBank S.A.)</li>
+                    <li>Umowa nr 710097862989780 z dnia 09.08.2018 r. (ING Bank Śląski S.A.)</li>
                 </ul>
             </div>
             
