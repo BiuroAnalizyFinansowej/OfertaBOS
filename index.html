@@ -140,18 +140,36 @@
             color: #333;
         }
 
+        /* --- NOWE STYLE DLA TABELI --- */
         .special-offer {
             background-color: #e6f7ff;
             font-weight: 700;
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #0056b3;
-            border: 2px solid #007bff;
-            border-radius: 8px;
+            border-left: 2px solid #007bff;
+            border-right: 2px solid #007bff;
         }
+        .special-offer.top {
+            border-top: 2px solid #007bff;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom: none;
+        }
+        .special-offer.middle {
+             border-bottom: none;
+        }
+        .special-offer.bottom {
+            border-bottom: 2px solid #007bff;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        /* --- KONIEC NOWYCH STYLI --- */
         
         .standard-offer {
-            color: #777;
+            color: #888;
             text-decoration: line-through;
+            text-decoration-thickness: 2px;
+            font-size: 0.95em;
         }
 
         .details-list, .conditions-list, .commitments-list, .security-list {
@@ -225,19 +243,35 @@
         .fee-calculation p {
             margin: 0;
             padding: 8px 0;
-        }
-        .fee-calculation .final-fee {
-            font-size: 1.3em;
-            font-weight: 700;
-            color: #28a745;
-            margin-top: 10px;
-            border-top: 1px solid #ddd;
-            padding-top: 15px;
+            font-size: 1.1em;
         }
         .fee-calculation .standard-fee {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #a3a3a3;
             text-decoration: line-through;
-            color: #888;
+            text-decoration-thickness: 2px;
         }
+        .fee-calculation .special-rate {
+            font-weight: 700;
+            color: #0056b3;
+            font-size: 1.2em;
+        }
+        .fee-calculation .discount {
+            font-weight: 700;
+            color: #e74c3c;
+            font-size: 1.1em;
+        }
+        .fee-calculation .final-fee {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #28a745;
+            margin-top: 15px;
+            border-top: 2px solid #b3e6b3;
+            padding-top: 15px;
+            text-align: center;
+        }
+
 
         .footer {
             background-color: #002d5a;
@@ -266,6 +300,9 @@
             .comparison-table th, .comparison-table td {
                 padding: 10px;
                 font-size: 0.9em;
+            }
+            .fee-calculation .final-fee {
+                font-size: 1.5em;
             }
         }
 
@@ -309,17 +346,17 @@
                     <tbody>
                         <tr>
                             <td>Marża Banku</td>
-                            <td class="special-offer">3,50%</td>
+                            <td class="special-offer top">3,50%</td>
                             <td class="standard-offer">4,59%</td>
                         </tr>
                         <tr>
                             <td>Prowizja przygotowawcza</td>
-                            <td class="special-offer">1,00%</td>
+                            <td class="special-offer middle">1,00%</td>
                             <td class="standard-offer">3,99%</td>
                         </tr>
                         <tr>
                             <td>Prowizja za wcześniejszą spłatę</td>
-                            <td class="special-offer">0,00%</td>
+                            <td class="special-offer bottom">0,00%</td>
                             <td class="standard-offer">2,00%</td>
                         </tr>
                     </tbody>
@@ -407,8 +444,8 @@
                 <p>Panie Doktorze, zgodnie z naszymi ustaleniami, przedstawiam szczegóły dotyczące wynagrodzenia dla naszego biura za pomyślne pozyskanie finansowania. Zostały naliczone wszystkie przysługujące Panu rabaty.</p>
                 <div class="fee-calculation">
                     <p><span class="standard-fee">Standardowa opłata: 10,0%</span></p>
-                    <p>Specjalna stawka dla Pana Doktora: <strong>8,0%</strong></p>
-                    <p>Dodatkowy rabat 30% (za współpracę SKD): <strong>-2,4 p.p.</strong></p>
+                    <p class="special-rate">Specjalna stawka dla Pana Doktora: <strong>8,0%</strong></p>
+                    <p class="discount">Dodatkowy rabat 30% (za współpracę SKD): <strong>-2,4 p.p.</strong></p>
                     <p class="final-fee">Finalna opłata dla Pana Doktora: 5,6% od kwoty kredytu</p>
                 </div>
             </div>
@@ -426,4 +463,3 @@
 
 </body>
 </html>
-
