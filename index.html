@@ -84,6 +84,36 @@
             margin-bottom: 15px;
             color: #0056b3;
         }
+        
+        .key-params-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .param-card {
+            background-color: #f8faff;
+            border: 1px solid #e0e9f5;
+            border-radius: 8px;
+            padding: 20px;
+            flex-grow: 1;
+            flex-basis: 200px;
+            box-shadow: 0 4px 12px rgba(0, 77, 153, 0.05);
+        }
+        .param-label {
+            display: block;
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .param-value {
+            display: block;
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #004d99;
+        }
 
         .comparison-table {
             width: 100%;
@@ -206,6 +236,9 @@
             }
             h1 { font-size: 1.8em; }
             h2 { font-size: 1.5em; }
+            .param-card {
+                flex-basis: 100%;
+            }
             .comparison-table th, .comparison-table td {
                 padding: 10px;
                 font-size: 0.9em;
@@ -221,9 +254,26 @@
         <div class="content">
             <h1 class="salutation">Szanowny Panie Doktorze,</h1>
             <p>w nawiązaniu do naszej rozmowy, mam przyjemność przedstawić spersonalizowaną, przygotowaną specjalnie dla Pana Doktora ofertę finansowania. Udało mi się uzyskać zgodę na warunki znacznie korzystniejsze od standardowych, aby jak najlepiej dopasować produkt do Pana potrzeb.</p>
+            
+            <div class="section">
+                 <div class="key-params-container">
+                    <div class="param-card">
+                        <span class="param-label">Kwota kredytu</span>
+                        <span class="param-value">1 500 000 zł</span>
+                    </div>
+                    <div class="param-card">
+                        <span class="param-label">Okres kredytowania</span>
+                        <span class="param-value">180 miesięcy</span>
+                    </div>
+                    <div class="param-card">
+                        <span class="param-label">Szacunkowa rata</span>
+                        <span class="param-value">ok. 14 615 zł</span>
+                    </div>
+                </div>
+            </div>
 
             <div class="section">
-                <h2>Indywidualna Oferta Kredytowa</h2>
+                <h2>Indywidualne Warunki Cenowe</h2>
                 <table class="comparison-table">
                     <thead>
                         <tr>
@@ -313,7 +363,7 @@
                     <li>Umowa nr PRO429816688 z dnia 07.10.2019 r. (Nest Bank S.A.)</li>
                     <li>Umowa nr 182826_2002 z dnia 30.07.2025 r. (Santander Bank Polska S.A)</li>
                     <li>Umowa nr 63 1020 5138 0000 9396 0112 7574 z dnia 20.05.2024 r. (Bank PKO BP S.A.)</li>
-                    <li>Umowa nr F10R21-27002550 z dnia 29.09.2021 r. (BNP Paribas Bank Polska S.A.)</li>
+                    <li>Umowa nr F10R21-27002550 z dnia 29.09.21 r. (BNP Paribas Bank Polska S.A.)</li>
                     <li>Umowa nr 61114020040000330279068215 z dnia 09.08.2019 r. (mBank S.A.)</li>
                     <li>Umowa nr 710097862989780 z dnia 09.08.2018 r. (ING Bank Śląski S.A.)</li>
                 </ul>
