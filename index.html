@@ -6,6 +6,8 @@
     <title>Indywidualna Oferta Kredytowa dla Pana Doktora</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap'); /* Dodane importy dla Montserrat i Roboto */
+
 
         body {
             font-family: 'Lato', sans-serif;
@@ -140,7 +142,6 @@
             color: #333;
         }
 
-        /* --- NOWE STYLE DLA TABELI --- */
         .special-offer {
             background-color: #e6f7ff;
             font-weight: 700;
@@ -163,7 +164,6 @@
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
         }
-        /* --- KONIEC NOWYCH STYLI --- */
         
         .standard-offer {
             color: #888;
@@ -273,17 +273,66 @@
         }
 
 
+        /* --- NOWE STYLE STOPKI --- */
         .footer {
             background-color: #002d5a;
             color: #ffffff;
-            padding: 30px 50px;
+            padding: 40px 50px;
+            display: flex;
+            flex-direction: row; /* Układ poziomy */
+            justify-content: space-between; /* Rozłożenie elementów na krańce */
+            align-items: center; /* Wyrównanie w pionie do środka */
+        }
+        .signature-block {
             text-align: left;
         }
         .footer p {
-            margin: 5px 0;
+            margin: 4px 0;
             color: #f0f0f0;
             font-size: 1em;
+            text-align: left; /* Domyślne wyrównanie tekstu w podpisie */
         }
+
+        .baf-logo-container {
+            background-color: transparent;
+            padding: 0;
+            display: block;
+            text-align: center; /* Wyśrodkowanie logo */
+            font-family: 'Montserrat', sans-serif;
+            flex-grow: 1; /* Pozwól mu rosnąć, aby wypełnić przestrzeń */
+            /* Użyjemy flexbox w media query dla lepszej kontroli nad wyśrodkowaniem */
+        }
+
+        .baf-main {
+            font-size: 60px;
+            font-weight: 700;
+            color: #ffffff;
+            position: relative;
+            letter-spacing: -10px;
+            margin: 0 auto; /* Wyśrodkowanie tekstu */
+            padding: 0;
+            line-height: 1;
+        }
+        
+        .baf-main .char-a {
+            position: relative;
+            z-index: 2;
+        }
+        .baf-main .char-b,
+        .baf-main .char-f {
+            position: relative;
+            z-index: 1;
+        }
+
+        .baf-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin-top: 8px;
+            text-align: center; /* Wyśrodkowanie podtytułu */
+        }
+        /* --- KONIEC STYLI STOPKI --- */
         
         @media (max-width: 768px) {
             .content {
@@ -303,6 +352,27 @@
             }
             .fee-calculation .final-fee {
                 font-size: 1.5em;
+            }
+
+            /* Dostosowanie stopki dla mobile */
+            .footer {
+                flex-direction: column; /* Powrót do układu pionowego */
+                padding: 30px 25px;
+            }
+            .baf-logo-container {
+                text-align: center; /* Logo na środku */
+                margin-bottom: 25px; /* Odstęp pod logo */
+                order: -1; /* Umieść logo na górze w układzie pionowym */
+            }
+            .signature-block, .footer p {
+                text-align: center; /* Podpis na środku */
+            }
+            .baf-main {
+                font-size: 50px;
+                letter-spacing: -8px;
+            }
+            .baf-subtitle {
+                font-size: 12px;
             }
         }
 
@@ -453,11 +523,21 @@
             <p>Mam nadzieję, że przedstawiona propozycja jest satysfakcjonująca. Jestem do pełnej dyspozycji, aby omówić szczegóły lub odpowiedzieć na wszelkie pytania.</p>
         </div>
         <div class="footer">
-            <p>Z wyrazami szacunku,</p>
-            <p><strong>Dawid Błachno</strong></p>
-            <p>Doradca Klienta Biznesowego</p>
-            <p>577 742 727</p>
-            <p>dawid.blachno@kancelaria-af.com</p>
+            <div class="signature-block">
+                <p>Z wyrazami szacunku,</p>
+                <p><strong>Dawid Błachno</strong></p>
+                <p>Doradca Klienta Biznesowego</p>
+                <p>577 742 727</p>
+                <p>dawid.blachno@kancelaria-af.com</p>
+            </div>
+            <div class="baf-logo-container">
+                <div class="baf-main">
+                    <span class="char-b">B</span><span class="char-a">A</span><span class="char-f">F</span>
+                </div>
+                <div class="baf-subtitle">
+                    BIURO ANALIZY FINANSOWEJ
+                </div>
+            </div>
         </div>
     </div>
 
